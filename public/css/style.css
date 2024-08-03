@@ -1,0 +1,20 @@
+
+/* .row{
+  border: 4px solid red;
+}
+.col{
+  border: 4px solid rgb(4, 20, 255);
+} */
+.gif{
+  width: 4rem;
+}
+.gif-name{
+  max-width: 7rem;
+}
+.btn-card{
+  margin: 1em 0;
+}
+
+.card{
+  margin-right: 1em;
+}
