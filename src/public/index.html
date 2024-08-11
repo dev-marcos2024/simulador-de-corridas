@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobrepor Divs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+   <div class="container">
+
+      <div class="row row-title">
+         <div class="col-1 col-img-title"><img id="img-title" src="./img/header.gif" alt=""></div>
+         <div class="col-11 col-title">
+            <h1 id = "title" >Simulador de Corrida do Mario Bros</h1>
+         </div>
+      </div>
+
+      <div class="container-cards">
+
+         <h4 class="title-cards">Selecione um personagem para corrida</h4>
+
+         <div class="row row-cards">
+      
+            <div class="col">
+               <div id="Mario" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Mario</h3>
+                     <img src="./img/mario.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 4</p>
+                     <p>Manobrabilidade: 3</p>
+                     <p>Poder: 3</p>
+                  </div>
+            </div>
+            </div>
+
+            <div class="col">
+               <div id="Peach" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Peach</h3>
+                     <img src="./img/peach.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 3</p>
+                     <p>Manobrabilidade: 4</p>
+                     <p>Poder: 2</p>
+                  </div>
+            </div>
+            </div>
+
+            <div class="col">
+               <div id="Yoshi" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Yoshi</h3>
+                     <img src="./img/yoshi.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 2</p>
+                     <p>Manobrabilidade: 4</p>
+                     <p>Poder: 3</p>
+                  </div>
+            </div>
+            </div>
+
+         </div>
+
+         <div class="row row-cards">
+      
+            <div class="col">
+               <div id="Bowser" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Bowser</h3>
+                     <img src="./img/bowser.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 5</p>
+                     <p>Manobrabilidade: 2</p>
+                     <p>Poder: 5</p>
+                  </div>
+            </div>
+            </div>
+
+            <div class="col">
+               <div id="Luigi" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Luigi</h3>
+                     <img src="./img/luigi.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 3</p>
+                     <p>Manobrabilidade: 4</p>
+                     <p>Poder: 4</p>
+                  </div>
+            </div>
+            </div>
+
+            <div class="col">
+               <div id="Donkey" class="cartao" onclick="selecionarPersonagem(this)">
+                  <div class="gif-name">
+                     <h3 class="nome-pers">Donkey</h3>
+                     <img src="./img/dk.gif" class="gif" alt="...">
+                  </div>
+                  <div class="abilidades">
+                     <p>Velocidade: 2</p>
+                     <p>Manobrabilidade: 2</p>
+                     <p>Poder: 5</p>
+                  </div>
+            </div>
+            </div>
+
+         </div>
+      </div>
+      
+      <div class="row row-sorte">
+         <div class="col cotainer-sorte">
+            <div id ="sorte-jogador" class="sorte-img"></div>
+            <div class=" container-result">
+               <p>Valor abilidade: </p>
+               <p>Dado da sorte:</p>
+               <p>Resultado: </p>
+            </div>
+            <div class="results">
+               <p id="bloco-voce" class="campo-result">0</p>
+               <p id="dado-voce" class="campo-result">0</p>
+               <p id="total-voce" class="campo-result">0</p>
+            </div>
+         </div>
+         <h4 id="pista-sorteada" class="col">Pista Sorteada: <span id="valor-bloco"></span></h4>
+         <div class="col cotainer-sorte">
+            <div id ="sorte-opon" class="sorte-img"></div>
+            <div class="container-result">
+               <p>Valor abilidade: </p>
+               <p>Dado da sorte:</p>
+               <p>Resultado: </p>
+            </div>
+            <div class="results">
+               <p id="bloco-oponente" class="campo-result">0</p>
+               <p id="dado-oponente" class="campo-result">0</p>
+               <p id="total-oponente" class="campo-result">0</p>
+            </div>
+         </div>
+      </div>
+      
+      
+      <div class="container-pista">
+         <div id ="container-pista">
+            <div id ="animate"></div>
+            <div id ="animate2"></div>
+            <div class="contador" id="contador"><span id="contagem">3</span></div>
+         </div>
+      </div>
+
+      <div class="btns-actions">
+         <button id="jogar" class="actions">Jogar</button>
+         <button id="reset" class="actions">Resetar</button>
+      </div>
+
+   </div>
+
+  <script  src="../main.js"></script>
+
+</body>
+</html>

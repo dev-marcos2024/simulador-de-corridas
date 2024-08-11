@@ -1,3 +1,5 @@
+// import { setResultdosJogador, setResultdosOponente, execultarJogo, JogadoresSelecionado} from "./public/js/render.js";
+
 class Personagem{
     constructor(nome, veloc, manobr, poder){
         this.nome = nome;
@@ -89,10 +91,12 @@ function player(p1, p2){
     }
 }
 
-async function main() {
+async function main(person1, person2) {
 
-    let personage1 = personagens["mario"];
-    let personage2 = personagens["bowser"];
+    let personage1 = personagens[person1];
+    let personage2 = personagens[person2];
+
+    console.log(personage1)
 
     console.log(`Iniciou a corrida entre ${personage1.nome} e ${personage2.nome}`);
     player(personage1, personage2);
@@ -107,5 +111,3 @@ async function main() {
     }
 };
 
-main()
-// console.log(p1.pontos, p1.pontos)
